@@ -80,8 +80,8 @@ switch (operat) {
     console.log(number1 * number2);
     break;
   case "/":
-    if (y == 0) {
-      console.log("You cannot devise by zero");
+    if (number2 == 0) {
+      console.log("You cannot divide by zero");
       break;
     }
     console.log(number1 / number2);
