@@ -106,12 +106,15 @@ else {
 }
 //BMI Calculator
 let weight = 75;
-let height = 180;
+let height = 1.80;
 if(weight / (height * height) <= 18.5) {
-    console.log("Underweight");
+    console.log(Math.round(weight / (height * height)) + " " + "Underweight");
 }
 else if(weight / (height * height) >= 18.5 && weight / (height * height) <= 24.9) {
-    console.log("Normal");
+    console.log(Math.round(weight / (height * height)) + " " + "Normal");
+}
+else if(weight / (height * height) >= 25) {
+    console.log(Math.round(weight / (height * height)) + " " + "Overweight");
 }
 else if(weight / (height * height) >= 25) {
     console.log("Overweight");
