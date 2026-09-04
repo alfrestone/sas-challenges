@@ -93,3 +93,39 @@ function capit(str) {
   result += String.fromCharCode(...hold_var);
   return result;
 }
+
+//String compressor
+function strcompressor(str) {
+  let i = 0;
+  let str1 = [];
+  let newstr = [];
+  while (i < str.length) {
+    let j = i;
+    let count = 0;
+    while (i < str.length && str[i] === str[j]) {
+      count++;
+      j++;
+    }
+    str1.push(str[i] + count);
+    newstr = str1.join('');
+    i = j;
+  }
+  
+  return newstr;
+}
+
+//Anagram checker
+function anacheck(str1, str2) {
+  str1 = str1.replaceAll(' ', '').split('').sort();
+  str2 = str2.replaceAll(' ', '').split('').sort();
+  let i = 0;
+  while (i < str1.length && i < str2.length) {
+    if (str1[i] === str2[i]) {
+      i++;
+    }
+    else {
+      return false;
+    }
+  }
+  return true;
+}
