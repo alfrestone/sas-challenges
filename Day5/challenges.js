@@ -153,7 +153,7 @@ function cloneobject(array) {
         return -1;
     }
     let emparray = {};
-    for (key in array) {
+    for (let key in array) {
         emparray[key] = array[key];
     }
    return emparray;
